@@ -35,23 +35,23 @@ function Profile() {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <CardTitle>
-              <h2>
+              <span>
                 {" "}
                 {data.firstName} {data.lastName}{" "}
-              </h2>
+              </span>
             </CardTitle>
             <CardDescription className="flex flex-wrap w-full gap-2">
               <Card className=" flex flex-col items-center justify-center w-16 h-16 bg-secondary">
-                <h2> Age </h2>
-                <h2 className="text-2xl">{data.age}</h2>
+                <span> Age </span>
+                <span className="text-2xl">{data.age}</span>
               </Card>
               <Card className=" flex flex-col items-center justify-center w-16 h-16 bg-secondary">
-                <h2> Weight </h2>
-                <h2 className="text-2xl">{data.weight}</h2>
+                <span> Weight </span>
+                <span className="text-2xl">{data.weight}</span>
               </Card>
               <Card className=" flex flex-col items-center justify-center w-16 h-16 bg-secondary">
-                <h2> Height </h2>
-                <h2 className="text-2xl">{data.height}</h2>
+                <span> Height </span>
+                <span className="text-2xl">{data.height}</span>
               </Card>
             </CardDescription>
           </CardHeader>

@@ -1,25 +1,26 @@
-"use client";
 import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
-import type {Metadata} from "next";
+// import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import {ThemeProvider} from "@/components/providers/theme-provider";
-import {Hydrate, QueryClient, QueryClientProvider} from "@tanstack/react-query";
+// import {Hydrate, QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import React from "react";
-import {metadata} from "@/constants/metadata";
+import TanstackProvider from "@/components/providers/tanstack-provider";
 const inter = Inter({subsets: ["latin"]});
+import {Toaster} from "@/components/ui/toaster";
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
-  const [queryClient] = React.useState(() => new QueryClient());
+  // const [queryClient] = React.useState(() => new QueryClient());
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <QueryClientProvider client={queryClient}>
+        <TanstackProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />
             {children}
+            <Toaster />
           </ThemeProvider>
-        </QueryClientProvider>
+        </TanstackProvider>
       </body>
     </html>
   );
