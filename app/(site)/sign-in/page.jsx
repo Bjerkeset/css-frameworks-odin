@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Example from "components/pages/home/hero";
+import SignInForm from "components/forms/SignInForm";
 
 function page() {
   return (
-    <main className="h-screen">
-      <h1>Sign in</h1>
+    <main className="flex justify-center items-center">
+      <SignInForm />
     </main>
   );
 }
