@@ -2,7 +2,7 @@
 
 import React from "react";
 import {QueryClientProvider, QueryClient} from "@tanstack/react-query";
-import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
+// import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 // import {ReactQueryStreamedHydration} from "@tanstack/react-query-next-experimental";
 
 function TanstackProviders({children}: React.PropsWithChildren) {
