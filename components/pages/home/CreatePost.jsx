@@ -12,7 +12,7 @@ import {CreatePostForm} from "@/components/forms/CreatePostForm";
 
 function CreatePost() {
   return (
-    <Dialog>
+    <Dialog className="">
       <DialogTrigger>
         <Button>Create Post</Button>
       </DialogTrigger>
