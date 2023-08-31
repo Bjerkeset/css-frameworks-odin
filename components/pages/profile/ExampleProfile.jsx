@@ -16,18 +16,18 @@ function Profile() {
   const isLoading = status === "loading";
 
   if (isLoading) {
-    return <span>Loading...</span>;
+    return <section className="min-h-screen">Loading...</section>;
   }
 
   if (error) {
-    return <span>Error: {error.message}</span>;
+    return <section className="min-h-screen">Error: {error.message}</section>;
   }
 
   console.log("user data >>>>", data);
 
   return (
     <>
-      <section>
+      <section className="min-h-screen">
         <Card className="flex flex-col items-center">
           <CardHeader className="flex flex-col items-center gap-4">
             <Avatar className="w-28 h-28">
