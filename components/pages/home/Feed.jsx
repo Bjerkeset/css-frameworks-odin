@@ -4,7 +4,7 @@ import PostCard from "@/components/pages/home/PostCard";
 import {Skeleton} from "@/components/ui/skeleton";
 
 function Feed() {
-  const {status, error, data: postData} = useAllPosts();
+  const {status, error, data: postData = {posts: []}} = useAllPosts(); // default value for postData is an empty array
 
   if (status === "loading") {
     return (
@@ -20,7 +20,7 @@ function Feed() {
 
   return (
     <section className="max-w-xl mt-12 flex flex-col gap-4">
-      {postData.posts.map((post) => (
+      {postData?.posts?.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}
     </section>
