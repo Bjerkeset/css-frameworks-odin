@@ -3,9 +3,9 @@ import Profile from "@/components/pages/profile/ExampleProfile";
 
 function page() {
   return (
-    <div>
+    <main className="h-[100vh]">
       <Profile />
-    </div>
+    </main>
   );
 }
 
