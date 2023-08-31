@@ -3,7 +3,7 @@ import CreatePost from "@/components/pages/home/CreatePost";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center">
+    <main className="flex h-[100vh] flex-col items-center">
       <CreatePost />
       <Feed />
     </main>
