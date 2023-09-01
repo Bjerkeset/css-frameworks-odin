@@ -8,7 +8,7 @@ function Feed() {
 
   if (status === "loading") {
     return (
-      <div className="w-full max-w-xl mt-12 flex flex-col gap-4 ">
+      <div className="w-full max-w-xl mt-12 flex flex-wrap gap-4 ">
         <Skeleton className="w-96 h-72" />
       </div>
     );
@@ -19,7 +19,7 @@ function Feed() {
   }
 
   return (
-    <section className="max-w-xl flex flex-col gap-4">
+    <section className=" flex flex-wrap gap-10 justify-center my-10 max-w-screen-2xl">
       {postData?.posts?.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}
