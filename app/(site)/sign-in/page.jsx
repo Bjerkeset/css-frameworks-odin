@@ -7,6 +7,7 @@ import Footer from "@/components/shared/Footer";
 function page() {
   return (
     <main className="flex min-h-screen justify-center items-center">
+      
       <SignInForm />
     </main>
   );
