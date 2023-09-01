@@ -18,16 +18,16 @@ function PostCard({ post }) {
   console.log("post: ", post);
 
   return (
-    <Card key={post.id} className="w-full">
+    <Card key={post.id} className="w-full max-w-md flex flex-col justify-between">
       <CardHeader>
-        <CardDescription className="flex items-center">
+        <CardDescription className="flex items-center my-2.5">
           <Avatar>
             <AvatarImage src={userData?.image} alt="User Image" />
             {/* <AvatarFallback>Odin</AvatarFallback> */}
           </Avatar>
           {userData?.username || "error"}
         </CardDescription>
-        <CardTitle>{post.title}</CardTitle>
+        <CardTitle className="my-2">{post.title}</CardTitle>
       </CardHeader>
       <CardContent className="w-full">
         <p>{post.body}</p>

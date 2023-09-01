@@ -9,10 +9,10 @@ import {
 
 function Search() {
   return (
-    <main className="flex flex-col items-center">
-      <div className="flex flex-row gap-2.5  w-max ">
+    <main className="flex items-center justify-center my-10 ">
+      <div className="flex gap-2.5">
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-[120px]">
             <SelectValue placeholder="Sort by" />
           </SelectTrigger>
           <SelectContent>
@@ -21,7 +21,7 @@ function Search() {
             <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
-        <Input className="w-80" placeholder="Search" />
+        <Input className=" max-w-[400px]" placeholder="Search" />
       </div>
     </main>
   );
