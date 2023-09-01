@@ -2,10 +2,11 @@
 import React from "react";
 import Example from "components/pages/home/hero";
 import SignInForm from "components/forms/SignInForm";
+import Footer from "@/components/shared/Footer";
 
 function page() {
   return (
-    <main className="flex justify-center items-center">
+    <main className="flex min-h-screen justify-center items-center">
       <SignInForm />
     </main>
   );

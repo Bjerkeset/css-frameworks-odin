@@ -19,7 +19,7 @@ function Feed() {
   }
 
   return (
-    <section className="max-w-xl mt-12 flex flex-col gap-4">
+    <section className="max-w-xl flex flex-col gap-4">
       {postData?.posts?.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}

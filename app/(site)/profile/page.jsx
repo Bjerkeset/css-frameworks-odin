@@ -1,11 +1,12 @@
 import React from "react";
 import Profile from "@/components/pages/profile/ExampleProfile";
+import Footer from "@/components/shared/Footer";
 
 function page() {
   return (
-    <main className="h-[100vh]">
+    <>
       <Profile />
-    </main>
+    </>
   );
 }
 
