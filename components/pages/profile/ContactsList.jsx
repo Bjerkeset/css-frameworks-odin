@@ -5,6 +5,10 @@ import UserContext from "@/lib/userContext";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Card, CardContent} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {AiOutlineMessage} from "react-icons/ai";
+import {CgProfile} from "react-icons/cg";
 
 function ContactsList() {
   const {status, error, data: userData = {users: []}} = useAllUsers(); // default value for postData is an empty array
@@ -23,21 +27,36 @@ function ContactsList() {
 
   console.log("userData: ", userData.users);
   return (
-    <ScrollArea className="h-[500px] w-[350px] rounded-md flex flex-col gap-4  border p-4 ">
-      {userData?.users?.map((user) => (
-        <Card className="" key={user.id}>
-          <CardContent className="w-full">{user.firstName}</CardContent>
-        </Card>
-      ))}
-      {/* <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
-        Jokester began sneaking into the castle in the middle of the night and
-        leaving jokes all over the place: under the king's pillow, in his soup,
-        even in the royal toilet. The king was furious, but he couldn't seem to
-        stop Jokester. And then, one day, the people of the kingdom discovered
-        that the jokes left by Jokester were so funny that they couldn't help
-        but laugh. And once they started laughing, they couldn't stop.
-      </ScrollArea> */}
-    </ScrollArea>
+    <section className="flex flex-col w-full items-center md:w-fit border p-4 rounded-md">
+      <div className="flex justify-center ">
+        <h4 className="text-3xl mb-1">Contact List</h4>
+      </div>
+      <ScrollArea className="h-[500px] sm:w-[350px] w-[290px] rounded-md flex flex-col  border ">
+        {userData?.users?.map((user) => (
+          <Card
+            key={user.id}
+            className="flex p-1 px-4 border-none rounded-md items-center"
+          >
+            <div className="w-full flex justify-between items-center text-center mb-auto">
+              <div className="flex items-center gap-1">
+                <Avatar className="bg-secondary">
+                  <AvatarImage src={user.image} />
+                </Avatar>
+                <p>{user.username}</p>
+              </div>
+              <div className="flex gap-2">
+                <Button variant={"outline"} className="rounded-3xl">
+                  <AiOutlineMessage />
+                </Button>
+                <Button className="rounded-3xl">
+                  <CgProfile />
+                </Button>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </ScrollArea>
+    </section>
   );
 }
 

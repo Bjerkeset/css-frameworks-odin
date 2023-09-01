@@ -1,13 +1,13 @@
 import React from "react";
-import Profile from "@/components/pages/profile/ExampleProfile";
+import Profile from "@/components/pages/profile/Profile";
 import Footer from "@/components/shared/Footer";
-import ContactsList from "@/components/pages/profile/ContactsList";
 
 function page() {
   return (
     <>
-      <ContactsList />
-      <Profile />
+      <section className="flex justify-around">
+        <Profile />
+      </section>
     </>
   );
 }

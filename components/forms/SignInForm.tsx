@@ -14,7 +14,13 @@ import {
 } from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {useToast} from "@/components/ui/use-toast";
-import {Card, CardContent} from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -42,13 +48,17 @@ export function SignInForm() {
     // ✅ This will be type-safe and validated.
     toast({
       title: "Form Submitted!",
-      description: "dssdkkds",
+      description: "Check your dev tools :)",
     });
     console.log(values);
   }
 
   return (
-    <Card>
+    <Card className="w-[318px] md:w-[500px] max-w-screen-md">
+      <CardHeader>
+        <CardTitle>Sign In</CardTitle>
+        <CardDescription>Complete form to sign in</CardDescription>
+      </CardHeader>
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
