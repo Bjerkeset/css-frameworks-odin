@@ -20,12 +20,14 @@ function PostCard({post}) {
   console.log("post: ", post);
 
   return (
-    <Card key={post.id} className="w-full max-w-md flex flex-col justify-between">
+    <Card
+      key={post.id}
+      className="w-full max-w-md flex flex-col justify-between"
+    >
       <CardHeader>
-        <CardDescription className="flex items-center my-2.5">
-          <Avatar>
+        <CardDescription className="flex gap-1 items-center my-2.5">
+          <Avatar className="bg-secondary">
             <AvatarImage src={userData?.image} alt="User Image" />
-            {/* <AvatarFallback>Odin</AvatarFallback> */}
           </Avatar>
           {userData?.username || "error"}
         </CardDescription>

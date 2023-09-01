@@ -41,8 +41,8 @@ export function CreatePostForm() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     toast({
-      title: "Form Submitted!",
-      description: "dssdkkds",
+      title: "Post Submitted!",
+      description: "Have a great day :)",
     });
     console.log(values);
   }
