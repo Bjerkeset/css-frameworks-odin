@@ -18,6 +18,12 @@ import {Card, CardContent} from "../ui/card";
 import {Textarea} from "../ui/textarea";
 
 const formSchema = z.object({
+  title: z
+    .string()
+    .min(2, {
+      message: "title must be at least 2 characters.",
+    })
+    .max(15, {message: "Must be less than 15 characters."}),
   post: z
     .string()
     .min(10, {
@@ -33,6 +39,7 @@ export function CreatePostForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       post: "",
+      title: "",
     },
   });
 
@@ -55,10 +62,23 @@ export function CreatePostForm() {
       >
         <FormField
           control={form.control}
+          name="title"
+          render={({field}) => (
+            <FormItem>
+              <FormLabel>Title</FormLabel>
+              <FormControl>
+                <Input placeholder="Your title here" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="post"
           render={({field}) => (
             <FormItem>
-              <FormLabel></FormLabel>
+              <FormLabel>Post content</FormLabel>
               <FormControl>
                 <Textarea
                   className="h-56"
