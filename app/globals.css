@@ -74,3 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+#tableContainer > div {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.5rem;
+}

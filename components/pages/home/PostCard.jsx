@@ -1,5 +1,5 @@
 "use client";
-import { useUser } from "@/lib/my-api";
+import {useUser} from "@/lib/my-api";
 import {
   Card,
   CardContent,
@@ -8,13 +8,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { AiFillHeart } from "react-icons/ai";
-import { Badge } from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {AiFillHeart} from "react-icons/ai";
+import {Badge} from "@/components/ui/badge";
+import React, {useContext} from "react";
+import UserContext from "@/lib/userContext";
 
-function PostCard({ post }) {
-  const { data: userData } = useUser(post.userId);
-  console.log("UserData: ", userData);
+function PostCard({post}) {
+  const {data: userData} = useUser(post.userId);
+  console.log("UserData:", userData);
   console.log("post: ", post);
 
   return (
