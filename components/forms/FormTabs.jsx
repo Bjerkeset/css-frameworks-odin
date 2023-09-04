@@ -6,7 +6,7 @@ function FormTabs() {
   return (
     <Tabs
       defaultValue="account"
-      className="w-[400px] flex flex-col items-center"
+      className="w-[300px] flex flex-col items-center"
     >
       <TabsList>
         <TabsTrigger value="account">Sign In</TabsTrigger>

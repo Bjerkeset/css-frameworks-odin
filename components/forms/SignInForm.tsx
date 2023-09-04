@@ -54,7 +54,7 @@ export function SignInForm() {
   }
 
   return (
-    <Card className="w-[318px] md:w-[500px] max-w-screen-md">
+    <Card className="w-[300px] md:w-[500px] max-w-screen-md">
       <CardHeader>
         <CardTitle>Sign In</CardTitle>
         <CardDescription>Complete form to sign in</CardDescription>

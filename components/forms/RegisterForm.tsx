@@ -72,7 +72,7 @@ export default function RegisterForm() {
       <Toaster />
       {/* // my style div */}
       <div className="flex justify-center">
-        <Card className="w-[318px] md:w-[500px] max-w-screen-md">
+        <Card className="w-[300px] md:w-[500px] max-w-screen-md">
           <CardHeader>
             <CardTitle>Register</CardTitle>
             <CardDescription>
