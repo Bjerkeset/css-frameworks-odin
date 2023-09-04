@@ -15,8 +15,7 @@ function Navbar() {
     <nav>
       <div className="hidden max-lg:flex justify-between">
         <div className="flex px-2">
-          {" "}
-          <Image src={logoUrl} height={25} width={25} alt={"logo"} />
+          <Image src={logoUrl} height={50} width={50} alt={"logo"} />
         </div>
         <Popover>
           <PopoverTrigger>
@@ -54,7 +53,7 @@ function Navbar() {
         </Popover>
       </div>
       <div className="max-lg:hidden flex items-center p-1 justify-between">
-        <div className="flex px-2">logo</div>
+        <Image src={logoUrl} height={50} width={75} alt={"logo"} />
         <div className="flex items-center gap-1">
           {navbarLinks.map((link) => {
             const isActive =
