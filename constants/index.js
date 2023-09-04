@@ -14,6 +14,6 @@ export const navbarLinks = [
   {
     imgURL: "/assets/next.svg",
     route: "/sign-in",
-    label: "Sign In",
+    label: "Sign-in/Up",
   },
 ];
