@@ -23,7 +23,7 @@ function Navbar() {
             <HamburgerMenuIcon className="w-8 h-8 w-full" />
           </PopoverTrigger>
           <PopoverContent className="flex justify-center flex-col w-full">
-            <div>
+            <div className="flex flex-col gap-2">
               {navbarLinks.map((link) => {
                 const isActive =
                   (pathname.includes(link.route) && link.route.length > 1) ||
@@ -32,17 +32,17 @@ function Navbar() {
                   <Link
                     href={link.route}
                     key={link.label}
-                    className={`flex justify-start gap-4 rounded-lg p-4 ${
-                      isActive && `bg-secondary`
+                    className={`flex justify-start  border hover:bg-secondary gap-4 rounded-lg p-4 ${
+                      isActive && `bg-primary`
                     }`}
                   >
                     {link.label}
-                    <Image
+                    {/* <Image
                       src={link.imgURL}
                       alt={link.label}
                       width={24}
                       height={24}
-                    />
+                    /> */}
                   </Link>
                 );
               })}
@@ -53,9 +53,9 @@ function Navbar() {
           </PopoverContent>
         </Popover>
       </div>
-      <div className="max-lg:hidden flex justify-between">
+      <div className="max-lg:hidden flex items-center p-1 justify-between">
         <div className="flex px-2">logo</div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-1">
           {navbarLinks.map((link) => {
             const isActive =
               (pathname.includes(link.route) && link.route.length > 1) ||
@@ -64,16 +64,16 @@ function Navbar() {
               <Link
                 href={link.route}
                 key={link.label}
-                className={`flex justify-start gap-2 rounded-lg p-2 ${
-                  isActive && `bg-secondary`
+                className={`flex justify-start border hover:bg-secondary gap-2 rounded-lg p-2 ${
+                  isActive && `bg-primary`
                 }`}
               >
-                <Image
+                {/* <Image
                   src={link.imgURL}
                   alt={link.label}
                   width={24}
                   height={24}
-                />
+                /> */}
                 <p className="text-light-1"> {link.label} </p>
               </Link>
             );
