@@ -7,6 +7,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+
+/**
+ * Adds a search bar to the feed page using shadcn's component.
+ * @author Krystian
+ */
+
 function Search() {
   return (
     <main className="flex items-center justify-center my-10 ">
